@@ -1,0 +1,12 @@
+<button 
+    class="btn btn-success"
+    (click)="handleClick()">
+    Click!!!
+</button>
+<p>{{message}}</p>
+<input
+    type="text" 
+    (keyup)="handleKeyUp($event)"
+    placeholder="Type Something..."
+/> 
+<p>Typed: {{inputValue}}</p>
