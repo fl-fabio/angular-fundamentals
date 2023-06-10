@@ -1,0 +1,17 @@
+<h2> I'm a parent Component </h2>
+<app-lifecycle-hooks
+    [myInput]="myString"></app-lifecycle-hooks>
+<button 
+    class="btn btn-primary"
+    (click)="onChangeString()"
+>
+    Click me to send data to child component!!!
+</button>
+
+<hr />
+<h2> I'm a parent Component </h2>
+<p>In this part I receive data from child component</p>
+<p>Received data: {{receivedData}}</p>
+<app-child
+    (dataEvent)="onReceiveData($event)">
+</app-child>

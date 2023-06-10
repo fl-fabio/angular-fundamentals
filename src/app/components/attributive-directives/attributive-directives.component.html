@@ -1,0 +1,29 @@
+<h1>Attributive directives</h1>
+<h3>*ngIf - ng-template ng-container - *ngTemplateOutlet</h3>
+<ng-template #contentTemplate>
+    <div>
+        <p>
+            Content visible when condition is true
+        </p>
+    </div>
+</ng-template>
+  
+<div 
+    *ngIf="isVisible; else noContentTemplate">
+        <ng-container *ngTemplateOutlet="contentTemplate">
+        </ng-container>
+</div>
+  
+<ng-template #noContentTemplate>
+<div>
+    <p>
+        No content available
+    </p>
+</div>
+</ng-template>
+
+<button 
+    class="btn btn-success"
+    (click)="toggleVisibility()">
+        Change Visibility
+</button>

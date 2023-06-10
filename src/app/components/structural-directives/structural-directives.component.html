@@ -1,0 +1,24 @@
+<h1> Structural Directives </h1>
+
+<h3>NgClass</h3>
+<div [ngClass]="{'active': isActive}">
+    <p>Elemente with conditional class</p>
+</div>
+<button
+    class="btn btn-secondary"
+    (click)="toggleActive()"
+>
+    Change State
+</button>
+
+<hr/>
+<h3>NgStyle</h3>
+<div
+    [ngStyle]="{'background-color': color, 'font-size': fontSize + 'px'}">
+    <p>Element with dinamical style</p>
+</div>
+<button
+    class="btn btn-primary"
+    (click)="changeStyle()">
+        Change style
+</button>
